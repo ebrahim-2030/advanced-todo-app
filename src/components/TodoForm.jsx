@@ -8,9 +8,9 @@ const TodoForm = ({ addTodo }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (todo.trim() === "") return; todos
+    if (todo.trim() === "") return;
     addTodo(todo);
-    setTodo(""); 
+    setTodo("");
   };
 
   return (
