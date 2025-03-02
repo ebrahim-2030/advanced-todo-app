@@ -1,29 +1,35 @@
 import React, { useState } from "react";
 
 const TodoForm = ({ addTodo }) => {
+  // State to manage the input field value
   const [todo, setTodo] = useState("");
 
+  // Handles form submission
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (todo.trim() === "") return;
+    if (todo.trim() === "") return; todos
     addTodo(todo);
-    setTodo("");
+    setTodo(""); 
   };
+
   return (
     <div>
       <form
         onSubmit={handleSubmit}
-        className="border-[2px] dark:border-white border-[#444] flex items-centers p-1 rounded-xl mt-6"
+        className="border-[2px] dark:border-white border-[#444] flex items-center p-1 rounded-xl mt-6"
       >
+        {/* Input field for entering new todos */}
         <input
           type="text"
-          placeholder="add your new todo..."
+          placeholder="Add your new todo..."
           value={todo}
           onChange={(e) => setTodo(e.target.value)}
           className="flex-1 bg-transparent px-2 outline-none placeholder:text-sm"
         />
-        <button className="bg-[#C9184A] px-5 py-2 rounded-lg text-white ">
+
+        {/* Button to add the todo */}
+        <button className="bg-[#C9184A] px-5 py-2 rounded-lg text-white">
           ADD
         </button>
       </form>

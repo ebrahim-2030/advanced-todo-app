@@ -19,7 +19,7 @@ const TodoItem = ({ todo, toggleTodo, deleteTodo }) => {
         <span>{todo.text}</span>
       </div>
       <button onClick={() => deleteTodo(todo.id)}>
-        <FaTrashCanArrowUp className="h-10 text-[#E63946]" />
+        <FaTrashCanArrowUp className="h-10 text-[#ef233c]" />
       </button>
     </li>
   );
