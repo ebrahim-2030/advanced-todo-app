@@ -30,7 +30,7 @@ const TodoList = ({ todos, toggleTodo, deleteTodo }) => {
         {todos.length > 5 && (
           <button
             onClick={handleToggle}
-            className="m-auto text-[#fff] bg-[#ffffff22] rounded-md px-3 py-1"
+            className="m-auto text-[#fff] bg-[#444] dark:bg-[#ffffff22] rounded-md px-3 py-1"
           >
             {visibleCount === todos.length ? "See Less" : "See All"}
           </button>
