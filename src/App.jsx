@@ -32,7 +32,7 @@ function App() {
     setTodos(todos.filter((todo) => todo.id !== todoId));
   };
   return (
-    <div className="min-h-screen  bg-[#0C161A] text-white overflow-hidden">
+    <div className="min-h-screen  bg-[#0C161A] text-white">
       <div className="max-w-[425px]  mx-auto p-5">
         <h1 className="text-4xl font-bold mt-10 mb-5">Todo</h1>
         <TodoForm addTodo={addTodo} />
