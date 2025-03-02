@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const TodoForm = () => {
-  return (
-    <div>TodoForm</div>
-  )
-}
+  return <div>TodoForm</div>;
+};
 
-export default TodoForm
+export default TodoForm;
