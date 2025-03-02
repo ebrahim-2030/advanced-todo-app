@@ -9,10 +9,10 @@ const TodoList = ({ todos, toggleTodo, deleteTodo }) => {
     else setVisibleCount(todos.length);
   };
   return (
-    <div>
-      <h2>All Todos</h2>
+    <div className="mt-10">
+      <h2 className="mb-1">Todo List</h2>
 
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-5 ">
         <ul className="w-full">
           {todos.slice(0, visibleCount).map((todo) => (
             <TodoItem

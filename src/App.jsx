@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { loadTodos, saveTodos } from "./utils/LocalStorage.js";
 import TodoForm from "./components/TodoForm";
 import TodoList from "./components/TodoList";
+import ThemeToggle from "./components/ThemeToggle.jsx";
 
 function App() {
   // Initializing state with todos loaded from local storage
@@ -32,9 +33,14 @@ function App() {
     setTodos(todos.filter((todo) => todo.id !== todoId));
   };
   return (
-    <div className="min-h-screen  bg-[#0C161A] text-white">
-      <div className="max-w-[425px]  mx-auto p-5">
-        <h1 className="text-4xl font-bold mt-10 mb-5">Todo</h1>
+    <div className="min-h-screen bg-slate-200 dark:bg-[#0C161A]   dark:text-white transition-all duration-500">
+      <div className="max-w-[425px]  mx-auto px-5 py-10">
+        <div className="flex items-center justify-between">
+          <h1 className="text-4xl font-bold text-[#444] dark:text-white">
+            Todo
+          </h1>
+          <ThemeToggle />
+        </div>
         <TodoForm addTodo={addTodo} />
         <TodoList
           todos={todos}

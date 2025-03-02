@@ -14,16 +14,18 @@ const TodoForm = ({ addTodo }) => {
     <div>
       <form
         onSubmit={handleSubmit}
-        className="border-2 flex items-centers p-1 rounded-xl mb-5"
+        className="border-[2px] dark:border-white border-[#444] flex items-centers p-1 rounded-xl mt-6"
       >
         <input
           type="text"
-          placeholder="add your new todo"
+          placeholder="add your new todo..."
           value={todo}
           onChange={(e) => setTodo(e.target.value)}
-          className="flex-1 bg-transparent px-2 outline-none"
+          className="flex-1 bg-transparent px-2 outline-none placeholder:text-sm"
         />
-        <button className="bg-[#C9184A] px-5 py-2 rounded-lg">ADD</button>
+        <button className="bg-[#C9184A] px-5 py-2 rounded-lg text-white ">
+          ADD
+        </button>
       </form>
     </div>
   );

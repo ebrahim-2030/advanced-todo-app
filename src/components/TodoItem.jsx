@@ -4,7 +4,7 @@ import { IoIosCheckmarkCircle } from "react-icons/io";
 
 const TodoItem = ({ todo, toggleTodo, deleteTodo }) => {
   return (
-    <li className="mt-2 flex items-center justify-between bg-[#ffffff22] px-3 py-3 rounded-xl">
+    <li className="mt-2 flex items-center justify-between dark:bg-[#ffffff22] shadow border border-[#ccc8] dark:border-[#ffffff44] px-3 py-3 rounded-xl">
       <div className="flex items-center gap-4">
         <button
           onClick={() => toggleTodo(todo.id)}
@@ -26,4 +26,3 @@ const TodoItem = ({ todo, toggleTodo, deleteTodo }) => {
 };
 
 export default TodoItem;
-  
